@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="logo.jpg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><h1>Habib's Artifact</h1></div>
+        <ul class="menu">
+            <li><a href="voting.html" target="content">Voting</a></li>
+            <li><a href="content.html" target="content" onclick="showAlert()">Home</a></li>
+            <li><a href="login.html" target="content"><i class="fas fa-user"></i></a></li>
+        </ul>
+    </nav>
+    <script>
+        function showAlert() {
+            alert("You clicked on Home!");
+        }
+    </script>
+</body>
+</html>

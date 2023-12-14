@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.jpg">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="left">
+            <p>Habib's Symphony</p>
+            <img src="logo.jpg" alt="logo.jpg">
+        </div>
+        <div class="right">
+            <div class="tabs">
+                <ul>
+                    <li class="registerli active">Register</li>
+                    <li class="loginli">Login</li>
+                </ul>
+            </div>
+            <form id="registrationForm">
+                <div class="register">
+                    <div class="input">
+                        <input type="text" name="registerUsername" placeholder="Username" class="inputText" onfocus="Username(this)" onblur="RemoveRed(this)">
+                    </div>
+                    <div class="input">
+                        <input type="text" name="registerEmail" placeholder="E-mail" class="inputText" onfocus="Email(this)" onblur="RemoveRed(this)">
+                    </div>
+                    <div class="input">
+                        <input type="password" name="registerPassword" placeholder="Password" class="inputText" onfocus="Password(this)" onblur="RemoveRed(this)">
+                    </div>
+                    <div class="btn" id="registerBtn">Register</div>
+                </div>
+            </form>
+            <form id="loginForm">
+                <div class="login">
+                    <div class="input">
+                        <input type="text" name="loginUsername" id="loginUsername" placeholder="Username" class="inputText" onfocus="Username(this)" onblur="RemoveRed(this)">
+                    </div>
+                    <div class="input">
+                        <input type="password" name="loginPassword" id="loginPassword" placeholder="Password" class="inputText" onfocus="Password(this)" onblur="RemoveRed(this)" >
+                    </div>
+                    <div class="btn" id="loginBtn">Login</div>
+                    <div class="links">
+                        <a href="recovery.html" class="forgot-password">Forgot Password?</a>
+                        <span class="divider">|</span>
+                        <a href="support.html" class="contact-us">Contact Us</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

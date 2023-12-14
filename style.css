@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+.menu-btn {
+  color: #f63e4e;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar {
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: black;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo h1 {
+  color: lightgrey;
+  border-bottom: 4px solid #fd6561;
+  font-size: 30px;
+}
+
+.navbar .menu li {
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar .menu li a {
+  text-decoration: none;
+  color: lightgrey;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar .menu {
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: block;
+  }
+}
+
+.menu.active .menu li {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px 15px;
+  margin: 10px 0;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .menu li a i {
+  color: #f63e4e;
+}
+
+.navbar .menu li a:hover {
+  border-bottom: 4px solid #f63e4e;
+  opacity: unset;
+}
+
+.content {
+  background-color: lightgrey;
+  background-size: 100%;
+  background-repeat: repeat;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #424144;
+  height: 96vh;
+  margin-top: 5px;
+}
+
+.content h1 {
+  font-size: 30px;
+  text-align: center;
+  margin: 35px 0 25px 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.pheading {
+  text-align: center;
+  color: #424144;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.products .card {
+  width: 310px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.products .card img {
+  height: 250px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.products .card .desc {
+  padding: 5px 20px;
+  opacity: 0.8;
+}
+
+.products .card .title {
+  font-weight: 900;
+  font-size: 20px;
+  color: #424144;
+  padding: 0 20px;
+}
+
+.products .card .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+footer {
+  background-color: darkgrey;
+  height: 20px;
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+  line-height: 10vh;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@media screen and (min-width: 0px) and (max-width: 321px) {
+  .content{
+    height: auto;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    justify-items: center;
+    align-items: center;
+  }
+
+  .products .card {
+    width: 100%;
+    padding: 1px;
+    margin-top: 5px;
+  }
+  .products .card .title {
+    font-size: 16px;
+  }
+  .products .card img {
+    height: auto;
+    max-width: 100%;
+  }
+  .products .card .box {
+    padding: 5px;
+  }
+  .navbar .logo h1 {
+    font-size: 20px;
+  }
+  footer {
+    height: 10vh;
+  }
+  footer p {
+    line-height: 10vh;
+  }
+}
